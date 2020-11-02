@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Header>
+    <eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader">
+      <eb:From>
+        <eb:PartyId eb:type="urn:x12.org.IO5:01">101_2020-Jun-09_18:45:01</eb:PartyId>
+      </eb:From>
+      <eb:To>
+        <eb:PartyId eb:type="urn:x12.org.IO5:01">webservices.sabre.com</eb:PartyId>
+      </eb:To>
+      <eb:ConversationId>101_2020-Jun-09_18:45:01</eb:ConversationId>
+      <eb:Service eb:type="OTA">DailySalesReportLLSRQ</eb:Service>
+      <eb:Action>DailySalesReportLLSRQ</eb:Action>
+      <eb:CPAID>H0CD</eb:CPAID>
+      <eb:MessageData>
+        <eb:MessageId>101_2020-Jun-09_18:45:01</eb:MessageId>
+        <eb:Timestamp>2020-06-09T14-23-45Z</eb:Timestamp>
+        <eb:TimeToLive>2020-06-09T14-23-45Z</eb:TimeToLive>
+      </eb:MessageData>
+    </eb:MessageHeader>
+    <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+      <wsse:BinarySecurityToken>Shared/IDL:IceSess/SessMgr:1.0.IDL/Common/!ICESMS/ACPCRTC!ICESMSLB/CRT.LB!1603683604278!7549!269</wsse:BinarySecurityToken>
+    </wsse:Security>
+  </soap-env:Header>
+  <soap-env:Body>
+    <DailySalesReportRQ Version="2.0.0">
+	<SalesReport PseudoCityCode="H0CD" StartDate="2020-01-01"/>
+</DailySalesReportRQ>
+  </soap-env:Body>
+</soap-env:Envelope>
